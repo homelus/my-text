@@ -1,4 +1,3 @@
 FROM openjdk:8-jdk-alpine
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} my-text.jar
+COPY /build/libs/my-text-0.0.1-SNAPSHOT.jar my-text.jar
 ENTRYPOINT ["java", "-jar", "/my-text.jar"]
